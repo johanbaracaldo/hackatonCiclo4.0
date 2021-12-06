@@ -24,7 +24,7 @@ public class UsersService {
         return userRepository.getAll();
     }
     
-    public Optional<Users> getUsers(int identification){
+    public Optional<Users> getUsers(String identification){
         return userRepository.getUsers(identification);
     }
     
@@ -103,7 +103,7 @@ public class UsersService {
                    usersDb.get().setTokens(users.getTokens());
                }
                userRepository.update(usersDb.get());
-               return usersDb.get();
+               return userRepository.update(usersDb.get());
            }else{
                return users;
            }
@@ -113,7 +113,7 @@ public class UsersService {
        
    }
    
-public boolean delete(int identification) {
+public boolean delete(String identification) {
         Boolean aBoolean = getUsers(identification).map(users -> {
             userRepository.delete(users);
             return true;

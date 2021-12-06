@@ -34,8 +34,8 @@ public class MovementsRepository {
         return repository.save(movements);
     }
     
-    public void update(Movements movements){
-        repository.save(movements);
+    public Movements update(Movements movements){
+        return repository.save(movements);
     }
     
     public void delete(Movements movements){

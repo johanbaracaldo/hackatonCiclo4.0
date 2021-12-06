@@ -35,8 +35,8 @@ public class calificationUserRepository {
         return repository.save(calificationU);
     }
     
-    public void update(calificationUser calificationU){
-        repository.save(calificationU);
+    public calificationUser update(calificationUser calificationU){
+        return repository.save(calificationU);
     }
     
     public void delete(calificationUser calificationU){

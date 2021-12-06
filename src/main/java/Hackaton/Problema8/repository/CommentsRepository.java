@@ -34,8 +34,8 @@ public class CommentsRepository {
         return repository.save(comments);
     }
     
-    public void update(Comments comments){
-        repository.save(comments);
+    public Comments update(Comments comments){
+        return repository.save(comments);
     }
     
     public void delete(Comments comments){

@@ -24,7 +24,7 @@ public class UserRepository {
         return repository.findAll();
     }
     
-    public Optional<Users> getUsers(int identification){
+    public Optional<Users> getUsers(String identification){
         return repository.findById(identification);
     }
     
@@ -32,8 +32,8 @@ public class UserRepository {
         return repository.save(users);
     }
     
-    public void update(Users users){
-        repository.save(users);
+    public Users update(Users users){
+         return repository.save(users);
     }
     
 public void delete(Users users){

@@ -38,7 +38,7 @@ public class BikeController {
     }
     
     @GetMapping("/{serialNumber}")
-    public Optional<Bike> getClothe(@PathVariable("serialNumber") String serialNumber) {
+    public Optional<Bike> getBike(@PathVariable("serialNumber") String serialNumber) {
         return bikeService.getBike(serialNumber);
     }
 

@@ -71,7 +71,7 @@ public class BikeService {
                 if (bike.getCalificationBike()!=null){
                    bikesDb.get().setCalificationBike(bike.getCalificationBike());
                }
-               return bikesDb.get();                
+               return bikeRepository.update(bikesDb.get());              
             }else{
                 return bike;
             }

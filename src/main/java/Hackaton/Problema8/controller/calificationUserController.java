@@ -54,7 +54,7 @@ public class calificationUserController {
         return califService.update(califu);
     }
 
-    @DeleteMapping("/{serialNumber}")
+    @DeleteMapping("/{idCali}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public boolean delete(@PathVariable("idCali") String idCali) {
         return califService.delete(idCali);

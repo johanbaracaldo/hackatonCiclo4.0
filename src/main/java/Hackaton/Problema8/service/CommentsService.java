@@ -59,7 +59,7 @@ public class CommentsService {
                }
                
                commentsRepository.update(commentsDb.get());
-               return commentsDb.get();
+              return commentsRepository.update(commentsDb.get());
            }else{
                return comments;
            }

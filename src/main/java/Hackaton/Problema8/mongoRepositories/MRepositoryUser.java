@@ -14,7 +14,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
  * @author johan
  */
 
-public interface MRepositoryUser extends MongoRepository<Users, Integer> {
+public interface MRepositoryUser extends MongoRepository<Users, String> {
     @Autowired
 
     public Optional<Users> findByEmail(String email);

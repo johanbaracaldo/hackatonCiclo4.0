@@ -34,8 +34,8 @@ public class BikeRepository {
         return repository.save(bike);
     }
     
-    public void update(Bike bike){
-        repository.save(bike);
+    public Bike update(Bike bike){
+        return repository.save(bike);
     }
     
     public void delete(Bike bike){

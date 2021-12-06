@@ -59,7 +59,7 @@ public class calificationUserService {
                    calificationuserDb.get().setCalificationUser(calificationU.getCalificationUser());
                }
                califRepository.update(calificationuserDb.get());
-               return calificationuserDb.get();
+               return califRepository.update(calificationuserDb.get());
            }else{
                return calificationU;
            }

@@ -7,6 +7,7 @@ package Hackaton.Problema8.controller;
 import Hackaton.Problema8.models.Users;
 import Hackaton.Problema8.service.UsersService;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -35,6 +36,10 @@ public class UsersController {
     public List<Users> getAll() {
         return usersService.getUsers();
     }
+    @GetMapping("/{identification}")
+    public Optional<Users> getUsers(@PathVariable("identification") String identification){
+        return usersService.getUsers(identification);
+    }    
       @PostMapping("/new")
     @ResponseStatus(HttpStatus.CREATED)
     public Users create(@RequestBody Users users) {
@@ -48,7 +53,7 @@ public class UsersController {
     }
     @DeleteMapping("/{identification}")
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("identification") int identification) {
+    public boolean delete(@PathVariable("identification") String identification) {
         return usersService.delete(identification);
     }
     @GetMapping("/{email}/{password}")

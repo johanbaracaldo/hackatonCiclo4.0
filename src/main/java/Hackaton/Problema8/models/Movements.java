@@ -24,6 +24,7 @@ public class Movements {
     private String user;
     private String date;
     private Integer time;
+    private String devolutionDate;
     private String devolutionTime;
     private String serialNumber;
     private Boolean request;

@@ -21,7 +21,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 @AllArgsConstructor
 public class Users {
     @Id
-    private Integer identification;
+    private String identification;
     private String idtype;
     private String name ;
     private String email;

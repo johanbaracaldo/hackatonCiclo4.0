@@ -38,7 +38,7 @@ public class CommentsController {
     }
     
     @GetMapping("/{idComment}")
-    public Optional<Comments> getClothe(@PathVariable("idComment") String idComment) {
+    public Optional<Comments> getComments(@PathVariable("idComment") String idComment) {
         return commentsService.getComments(idComment);
     }
 

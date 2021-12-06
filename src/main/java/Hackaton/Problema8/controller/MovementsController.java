@@ -37,8 +37,8 @@ public class MovementsController {
         return moveService.getAll();
     }
     
-    @GetMapping("/{serialNumber}")
-    public Optional<Movements> getClothe(@PathVariable("id") int id) {
+    @GetMapping("/{id}")
+    public Optional<Movements> getMovements(@PathVariable("id") int id) {
         return moveService.getMovements(id);
     }
 

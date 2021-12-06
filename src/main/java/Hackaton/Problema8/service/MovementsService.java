@@ -51,6 +51,9 @@ public class MovementsService {
                if (movements.getTime()!=null){
                    movementsDb.get().setTime(movements.getTime());
                }
+               if (movements.getDevolutionDate()!=null){
+                   movementsDb.get().setDevolutionDate(movements.getDevolutionDate());
+               }
                if (movements.getDevolutionTime()!=null){
                    movementsDb.get().setDevolutionTime(movements.getDevolutionTime());
                }
@@ -61,7 +64,7 @@ public class MovementsService {
                    movementsDb.get().setRequest(movements.getRequest());
                }
                moveRepository.update(movementsDb.get());
-               return movementsDb.get();
+               return moveRepository.update(movementsDb.get());
            }else{
                return movements;
            }
